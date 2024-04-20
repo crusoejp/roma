@@ -9,7 +9,7 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
-import { Item } from "../utils";
+import { Item, mockApiUrl } from "../utils";
 import React from "react";
 import StyledButton from "./StyledButton";
 
@@ -20,7 +20,6 @@ interface Props {
 }
 
 const ShopItemModal = ({ isOpen, onClose, item }: Props) => {
-  const addToCart = (item: Item) => {};
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -33,10 +32,7 @@ const ShopItemModal = ({ isOpen, onClose, item }: Props) => {
           <Box>{item.description}</Box>
         </ModalBody>
         <ModalFooter>
-          <StyledButton
-            handleClick={() => addToCart(item)}
-            label="Add To Cart"
-          />
+          <StyledButton handleClick={() => {}} label="Out of Stock" disabled />
         </ModalFooter>
       </ModalContent>
     </Modal>

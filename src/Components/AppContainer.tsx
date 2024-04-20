@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Link } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import Nav from "./Nav";
 
@@ -13,7 +13,7 @@ const AppContainer = ({ children }: Props) => {
       {children}
       <Flex>
         <Box w="100%" textAlign="center" py="20px" h="15vh">
-          © 2021 Naked Saints
+          © 2024 Naked Saints
         </Box>
       </Flex>
     </Box>
