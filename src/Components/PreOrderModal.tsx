@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import StyledButton from "./StyledButton";
+import { mockApiUrl } from "../utils";
 
 interface Props {
   isOpen: boolean;
@@ -26,7 +27,7 @@ const PreOrderModal = ({ isOpen, onClose }: Props) => {
     }
 
     // CREATE - Post email to mock API
-    await fetch("https://66234bc83e17a3ac846ef8b2.mockapi.io/preorder", {
+    await fetch(`${mockApiUrl}/preorder`, {
       method: "POST",
       body: JSON.stringify({
         email,

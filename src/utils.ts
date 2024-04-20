@@ -27,9 +27,19 @@ export interface ShowRequest {
   name: string;
 }
 
+export interface Item {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+  description: string;
+}
+
 export const getInitials = (name: string) => {
   return name
     .split(" ")
     .map((n) => n[0])
     .join("");
 };
+
+export const mockApiUrl = "https://66234bc83e17a3ac846ef8b2.mockapi.io";

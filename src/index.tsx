@@ -7,11 +7,14 @@ import Tour from "./Pages/Tour";
 import ContactUs from "./Pages/ContactUs";
 import { ChakraProvider } from "@chakra-ui/react";
 import AppContainer from "./Components/AppContainer";
+import Shop from "./Pages/Shop";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/tour", element: <Tour /> },
   { path: "/contact-us", element: <ContactUs /> },
+  { path: "/shop", element: <Shop /> },
+  { path: "*", element: <Home /> },
 ]);
 
 ReactDOM.render(

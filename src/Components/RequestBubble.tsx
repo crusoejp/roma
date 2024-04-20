@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ShowRequest, getInitials } from "../utils";
+import { ShowRequest, getInitials, mockApiUrl } from "../utils";
 import { Box, Collapse, Flex, Icon } from "@chakra-ui/react";
 import { ThumbUpFontIcon, ThumbUpSVGIcon } from "react-md";
 
@@ -19,30 +19,24 @@ const RequestBubble = ({ request, index, refetch }: Props) => {
   const handleLike = async () => {
     setUserLiked(!userLiked);
     // UPDATE - send like to server
-    await fetch(
-      `https://66234bc83e17a3ac846ef8b2.mockapi.io/requested_date/${request.id}`,
-      {
-        method: "PUT",
-        body: JSON.stringify({
-          likes: userLiked ? request.likes - 1 : request.likes + 1,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    await fetch(`${mockApiUrl}/requested_date/${request.id}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        likes: userLiked ? request.likes - 1 : request.likes + 1,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     refetch();
   };
 
   const handleDelete = async () => {
     // DELETE - delete request from server
-    await fetch(
-      `https://66234bc83e17a3ac846ef8b2.mockapi.io/requested_date/${request.id}`,
-      {
-        method: "DELETE",
-      }
-    );
+    await fetch(`${mockApiUrl}/requested_date/${request.id}`, {
+      method: "DELETE",
+    });
 
     refetch();
   };

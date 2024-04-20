@@ -1,20 +1,18 @@
 import { Box, Flex } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import TourItem from "../Components/TourItem";
-import { TourDate } from "../utils";
+import { TourDate, mockApiUrl } from "../utils";
 import ButtonLink from "../Components/ButtonLink";
+import Title from "../Components/Title";
 
 const Tour = () => {
   const [tour, setTour] = useState<TourDate[]>([]);
 
   // READ - Fetch tour dates from mock API
   const getTourDates = async () => {
-    const res = await fetch(
-      "https://66234bc83e17a3ac846ef8b2.mockapi.io/tour_date",
-      {
-        method: "GET",
-      }
-    );
+    const res = await fetch(`${mockApiUrl}/tour_date`, {
+      method: "GET",
+    });
 
     const data = await res.json();
 
@@ -27,14 +25,7 @@ const Tour = () => {
 
   return (
     <Box minH="85vh" color="black" bgColor="white" p="2%">
-      <Box
-        fontSize="36px"
-        fontFamily="monospace"
-        w="100%"
-        borderBottom="1px solid black"
-      >
-        UPCOMING TOUR DATES
-      </Box>
+      <Title label="UPCOMING TOUR DATES" />
       {tour.map((t) => (
         <TourItem key={t.date} tourDate={t} />
       ))}

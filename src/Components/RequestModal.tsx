@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import StyledButton from "./StyledButton";
+import { mockApiUrl } from "../utils";
 
 interface Props {
   isOpen: boolean;
@@ -29,7 +30,7 @@ const RequestModal = ({ isOpen, onClose, refetch }: Props) => {
     }
 
     // CREATE - Post requested show to mock API
-    await fetch("https://66234bc83e17a3ac846ef8b2.mockapi.io/requested_date", {
+    await fetch(`${mockApiUrl}/requested_date`, {
       method: "POST",
       body: JSON.stringify({
         city: `${city}, ${state}`,

@@ -1,8 +1,7 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import RequestModal from "../Components/RequestModal";
-import RequestBubble from "../Components/RequestBubble";
-import { ShowRequest } from "../utils";
+import { ShowRequest, mockApiUrl } from "../utils";
 import StyledButton from "../Components/StyledButton";
 import BubbleContainer from "../Components/BubbleContainer";
 
@@ -11,12 +10,9 @@ const ContactUs = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   const getShowRequests = async () => {
-    const res = await fetch(
-      "https://66234bc83e17a3ac846ef8b2.mockapi.io/requested_date",
-      {
-        method: "GET",
-      }
-    );
+    const res = await fetch(`${mockApiUrl}/requested_date`, {
+      method: "GET",
+    });
 
     const data = await res.json();
 
