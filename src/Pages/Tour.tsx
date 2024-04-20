@@ -17,9 +17,11 @@ const Tour = () => {
 
     const data = await res.json();
 
+    // useState to set the tour dates
     setTour(data);
   };
 
+  // useEffect to get tour dates on page load
   useEffect(() => {
     getTourDates();
   }, []);

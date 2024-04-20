@@ -12,13 +12,16 @@ interface Props {
 // text message looking things on the contact us page
 const RequestBubble = ({ request, index, refetch }: Props) => {
   const [userLiked, setUserLiked] = useState<boolean>(false);
+
   const left = index % 2 === 0;
   const inverseColor = left ? "black" : "white";
   const color = left ? "white" : "black";
+
   const [showDelete, setShowDelete] = useState<boolean>(false);
 
   const handleLike = async () => {
     setUserLiked(!userLiked);
+
     // UPDATE - send like to server
     await fetch(`${mockApiUrl}/requested_date/${request.id}`, {
       method: "PUT",

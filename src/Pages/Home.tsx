@@ -5,6 +5,7 @@ import PreOrderModal from "../Components/PreOrderModal";
 
 // the home page with the pre-order button
 const Home = () => {
+  // the state that controls the modal
   const [open, setOpen] = useState<boolean>(false);
 
   return (

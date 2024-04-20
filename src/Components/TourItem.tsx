@@ -12,6 +12,7 @@ interface Props {
 
 // tour date rows that get returned in the map.
 const TourItem = ({ tourDate }: Props) => {
+  // formatting the date for humans
   const date = new Date(tourDate.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",

@@ -1,3 +1,4 @@
+// links for the tour page
 export const getRandomLink = () => {
   const links = [
     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -15,11 +16,14 @@ export const getRandomLink = () => {
   return links[randomNum];
 };
 
+// interface for the tour dates
 export interface TourDate {
+  id: string;
   date: string;
   location: string;
 }
 
+// interface for the show requests
 export interface ShowRequest {
   id: string;
   city: string;
@@ -27,14 +31,16 @@ export interface ShowRequest {
   name: string;
 }
 
+// interface for the items in the store
 export interface Item {
-  id: number;
+  id: string;
   name: string;
   price: string;
   image: string;
   description: string;
 }
 
+// function to get the initials of a name for the bubbles
 export const getInitials = (name: string) => {
   return name
     .split(" ")
@@ -42,4 +48,5 @@ export const getInitials = (name: string) => {
     .join("");
 };
 
+// typically i'd put this in the environment variables, but for the sake of the reviewer
 export const mockApiUrl = "https://66234bc83e17a3ac846ef8b2.mockapi.io";

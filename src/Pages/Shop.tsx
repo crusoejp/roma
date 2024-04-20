@@ -8,6 +8,7 @@ import { Item, mockApiUrl } from "../utils";
 const Shop = () => {
   const [items, setItems] = React.useState<Item[]>([]);
 
+  // READ - Fetch shop items from mock API
   const getShopItems = async () => {
     const res = await fetch(`${mockApiUrl}/shop_item`, {
       method: "GET",
@@ -15,9 +16,11 @@ const Shop = () => {
 
     const data = await res.json();
 
+    // useState to set the shop items
     setItems(data);
   };
 
+  // useEffect to get shop items on page load
   useEffect(() => {
     getShopItems();
   }, []);

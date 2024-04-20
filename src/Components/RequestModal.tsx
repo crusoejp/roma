@@ -43,6 +43,7 @@ const RequestModal = ({ isOpen, onClose, refetch }: Props) => {
       },
     });
 
+    // we're going to refetch to grab the new show request
     refetch();
     onClose();
   };
