@@ -4,6 +4,7 @@ import Title from "../Components/Title";
 import ShopItem from "../Components/ShopItem";
 import { Item, mockApiUrl } from "../utils";
 
+// let them spend their money
 const Shop = () => {
   const [items, setItems] = React.useState<Item[]>([]);
 

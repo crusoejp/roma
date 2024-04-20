@@ -20,7 +20,9 @@ const router = createBrowserRouter([
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
+      {/* AppContainer is a wrapper that puts the nav and footer on every page */}
       <AppContainer>
+        {/* I'm  using react-router-dom v6 */}
         <RouterProvider router={router} />
       </AppContainer>
     </ChakraProvider>

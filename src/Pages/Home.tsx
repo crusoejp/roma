@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import StyledButton from "../Components/StyledButton";
 import PreOrderModal from "../Components/PreOrderModal";
 
+// the home page with the pre-order button
 const Home = () => {
   const [open, setOpen] = useState<boolean>(false);
 

@@ -5,6 +5,7 @@ import { ShowRequest, mockApiUrl } from "../utils";
 import StyledButton from "../Components/StyledButton";
 import BubbleContainer from "../Components/BubbleContainer";
 
+// the text message page
 const ContactUs = () => {
   const [requests, setRequests] = useState<ShowRequest[]>([]);
   const [open, setOpen] = useState<boolean>(false);

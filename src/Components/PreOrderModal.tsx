@@ -18,6 +18,7 @@ interface Props {
   onClose: () => void;
 }
 
+// modal for pre-ordering an item on the home screen
 const PreOrderModal = ({ isOpen, onClose }: Props) => {
   const [email, setEmail] = useState<string>("");
 

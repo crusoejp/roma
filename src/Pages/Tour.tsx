@@ -5,6 +5,7 @@ import { TourDate, mockApiUrl } from "../utils";
 import ButtonLink from "../Components/ButtonLink";
 import Title from "../Components/Title";
 
+// the tour page, showing tour dates and a button to request a show.
 const Tour = () => {
   const [tour, setTour] = useState<TourDate[]>([]);
 

@@ -19,6 +19,7 @@ interface Props {
   item: Item;
 }
 
+// modal for shop items
 const ShopItemModal = ({ isOpen, onClose, item }: Props) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>

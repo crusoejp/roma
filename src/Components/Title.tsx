@@ -5,6 +5,7 @@ interface Props {
   label: string;
 }
 
+// A title component that I reused on almost every page.
 const Title = ({ label }: Props) => {
   return (
     <Box

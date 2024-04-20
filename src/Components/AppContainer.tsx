@@ -6,6 +6,7 @@ interface Props {
   children: any;
 }
 
+// puts the nav and the footer on every page
 const AppContainer = ({ children }: Props) => {
   return (
     <Box w="100%" bgColor="black" color="white">

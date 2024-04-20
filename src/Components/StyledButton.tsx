@@ -7,6 +7,7 @@ interface Props {
   disabled?: boolean;
 }
 
+// A button with custom styling which I reused in multiple components.
 const StyledButton = ({ handleClick, label, disabled }: Props) => {
   return (
     <Button

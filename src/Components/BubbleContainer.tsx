@@ -9,6 +9,7 @@ interface Props {
   refetch: () => void;
 }
 
+// BubbleContainer is a component that displays a list of RequestBubble components
 const BubbleContainer = ({ requests, refetch }: Props) => {
   return (
     <Flex flexDir="column" gap="20px">

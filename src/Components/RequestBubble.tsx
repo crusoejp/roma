@@ -9,6 +9,7 @@ interface Props {
   refetch: () => void;
 }
 
+// text message looking things on the contact us page
 const RequestBubble = ({ request, index, refetch }: Props) => {
   const [userLiked, setUserLiked] = useState<boolean>(false);
   const left = index % 2 === 0;

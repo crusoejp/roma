@@ -7,6 +7,7 @@ interface Props {
   item: Item;
 }
 
+// card items for shop
 const ShopItem = ({ item }: Props) => {
   const [open, setOpen] = useState<boolean>(false);
   return (

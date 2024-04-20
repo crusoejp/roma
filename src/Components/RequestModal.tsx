@@ -19,6 +19,7 @@ interface Props {
   refetch: () => void;
 }
 
+// modal for requesting a show on the contact us page
 const RequestModal = ({ isOpen, onClose, refetch }: Props) => {
   const [city, setCity] = useState<string>("");
   const [state, setState] = useState<string>("");
